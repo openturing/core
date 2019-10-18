@@ -96,16 +96,11 @@ public class TurUtils {
 	/**
 	 * Unzip it
 	 * 
-	 * @param zipFile
-	 *            input zip file
-	 * @param outputFolder
-	 *            output Folder
-	 * @throws ArchiveException
-	 *             if creating or adding to the archive fails
-	 * @throws IOException
-	 *             if the io fails
+	 * @param zipFile      input zip file
+	 * @param outputFolder output Folder
+	 * @throws IOException if the IO fails
 	 */
-	public void unZipIt(File zipFile, File outputFolder) throws ArchiveException, IOException {
+	public void unZipIt(File zipFile, File outputFolder) throws IOException {
 
 		try (ZipArchiveInputStream zin = new ZipArchiveInputStream(new FileInputStream(zipFile))) {
 			ZipArchiveEntry entry;
@@ -124,5 +119,4 @@ public class TurUtils {
 			}
 		}
 	}
-
 }
